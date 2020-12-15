@@ -7,4 +7,3 @@ def max_integer(my_list=[]):
                 imax = i
         return imax
     return None
-
