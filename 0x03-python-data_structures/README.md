@@ -1,4 +1,4 @@
-# 0x02 - Python - import & modules
+# 0x03 - Python - Data Structures: Lists, Tuples
 
 At the end of this project, I am expected to be able to explain to anyone, without the help of Google:
 * Why Python programming is awesome
