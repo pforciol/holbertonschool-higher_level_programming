@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+"""Singly Linked Lists module.
+
+This module contains methods about the creation and hendling of
+SinglyLinkedList and Node objects.
+
+"""
+
+
 class Node():
     """Defines a node of a singly linked list."""
 
