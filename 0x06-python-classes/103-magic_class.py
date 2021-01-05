@@ -7,6 +7,8 @@ This module contains the MagicClass class used for the bytecode exercise.
 
 
 class MagicClass():
+    """Defines a MagicClass object."""
+
     def __init__(self, radius):
         """Sets the necessary attributes for the MagicClass object.
 
