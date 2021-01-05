@@ -11,7 +11,7 @@ import math
 class MagicClass():
     """Defines a MagicClass object."""
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """Sets the necessary attributes for the MagicClass object.
 
         Args:
