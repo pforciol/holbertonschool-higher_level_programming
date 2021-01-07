@@ -1,0 +1,116 @@
+The ``add_integer`` module
+==========================
+
+Using ``add_integer``
+---------------------
+
+First import ``add_integer`` from the ``add_integer`` module:
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+	>>> add_integer(1, 2)
+	3
+
+	>>> add_integer(2)
+	100
+
+	>>> add_integer(1, -2)
+	-1
+
+	>>> add_integer(-2)
+	96
+
+	>>> add_integer(-1, -2)
+	-3
+
+	>>> add_integer(1, 2.5)
+	3
+
+	>>> add_integer(2.5)
+	100
+
+	>>> add_integer(1, -2.5)
+	-1
+
+	>>> add_integer(-2.5)
+	96
+
+	>>> add_integer(-1, -2.5)
+	-3
+
+	>>> add_integer(1.5, 2.5)
+	3
+
+	>>> add_integer(2.5)
+	100
+
+	>>> add_integer(1.5, -2.5)
+	-1
+
+	>>> add_integer(-2.5)
+	96
+
+	>>> add_integer(-1.5, -2.5)
+	-3
+
+	>>> add_integer(float('inf'), 1)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(float('inf'), float('inf'))
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(1, float('inf'))
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+	
+	>>> add_integer("Holberton", 1)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer("Holberton", "School")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(1, "School")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer("Holberton")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(None, 1)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(None, None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(1, None)
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
