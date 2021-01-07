@@ -74,6 +74,26 @@ Now use it:
 	Traceback (most recent call last):
 	...
 	TypeError: a must be an integer
+
+	>>> add_integer(-float('inf'), 1)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(-float('inf'), -float('inf'))
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(1, -float('inf'))
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer(-float('inf'))
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
 	
 	>>> add_integer("Holberton", 1)
 	Traceback (most recent call last):
