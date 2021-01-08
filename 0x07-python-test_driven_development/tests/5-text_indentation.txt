@@ -23,6 +23,14 @@ Now use it:
 	Lorem:
 	<BLANKLINE>
 
+	>>> text_indentation("Betty")
+	Betty
+
+	>>> text_indentation(":Betty")
+	:
+	<BLANKLINE>
+	Betty
+
 	>>> text_indentation(":")
 	:
 	<BLANKLINE>
