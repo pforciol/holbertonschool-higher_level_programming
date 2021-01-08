@@ -8,7 +8,7 @@ This module supplies one function, matrix_mul().
 
 def matrix_mul(m_a, m_b):
     """
-    Return a new matrix where each element has been divided by div.
+    Return a new matrix multiplied.
 
     Args:
         m_a (list): list of lists of integers or floats.
@@ -62,4 +62,5 @@ def matrix_mul(m_a, m_b):
     if row_a_len is not len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
 
-    return [[sum(a * b for a, b in zip(row_a, col_b))for col_b in zip(*m_b)] for row_a in m_a]
+    return [[sum(a * b for a, b in zip(row_a, col_b))
+             for col_b in zip(*m_b)] for row_a in m_a]

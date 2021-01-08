@@ -1,0 +1,122 @@
+The ``lazy_matrix_mul`` module
+==========================
+
+Using ``lazy_matrix_mul``
+---------------------
+
+First import ``lazy_matrix_mul`` from the ``lazy_matrix_mul`` module:
+
+	>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Now use it:
+
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+	array([[ 7, 10],
+	       [15, 22]])
+
+	>>> lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+	array([[13, 16]])
+	
+	>>> lazy_matrix_mul([[1, 2, 3]], [[3, 4, 5], [5, 6, 8], [9, 10, 11]])
+	array([[40, 46, 54]])
+
+	>>> lazy_matrix_mul([[2]], [[7]])
+	array([[14]])
+
+
+	>>> lazy_matrix_mul(9, [[1, 2], [3, 4]])
+	array([[ 9, 18],
+	       [27, 36]])
+
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], 9)
+	array([[ 9, 18],
+	       [27, 36]])
+
+	>>> lazy_matrix_mul(9, 9)
+	81
+
+
+	>>> lazy_matrix_mul([1, 2, 3, 4], [[1, 2], [3, 4]])
+	Traceback (most recent call last):
+	...
+	ValueError: objects are not aligned
+
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [1, 2, 3, 4])
+	Traceback (most recent call last):
+	...
+	ValueError: objects are not aligned
+
+	>>> lazy_matrix_mul([1, 2, 3, 4], [1, 2, 3, 4])
+	30
+
+
+	>>> lazy_matrix_mul([], [[1, 2], [3, 4]])
+	Traceback (most recent call last):
+	...
+	ValueError: objects are not aligned
+
+	>>> lazy_matrix_mul([[]], [[1, 2], [3, 4]])
+	Traceback (most recent call last):
+	...
+	ValueError: objects are not aligned
+
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [])
+	Traceback (most recent call last):
+	...
+	ValueError: objects are not aligned
+
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[]])
+	Traceback (most recent call last):
+	...
+	ValueError: objects are not aligned
+
+	>>> lazy_matrix_mul([], [])
+	False
+
+	>>> lazy_matrix_mul([[]], [[]])
+	Traceback (most recent call last):
+	...
+	ValueError: objects are not aligned
+
+	
+	>>> lazy_matrix_mul([[1, 2], ["Betty", 4]], [[1, 2], [3, 4]])
+	Traceback (most recent call last):
+	...
+	ValueError: data type must provide an itemsize
+
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, "Holberton"], [3, 4]])
+	Traceback (most recent call last):
+	...
+	ValueError: data type must provide an itemsize
+
+	>>> lazy_matrix_mul([[1, 2], [None, 4]], [[1, 2], [3, 4]])
+	Traceback (most recent call last):
+	...
+	TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+
+
+	>>> lazy_matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]])
+	Traceback (most recent call last):
+	...
+	ValueError: setting an array element with a sequence.
+
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1], [3, 4]])
+	Traceback (most recent call last):
+	...
+	ValueError: setting an array element with a sequence.
+
+	>>> lazy_matrix_mul([[1, 2], [3]], [[1], [3, 4]])
+	Traceback (most recent call last):
+	...
+	ValueError: setting an array element with a sequence.
+
+
+	>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4], [5, 6]])
+	Traceback (most recent call last):
+	...
+	ValueError: objects are not aligned
+
+	>>> lazy_matrix_mul([[1, 2, 3], [3, 4, 5]], [[1, 2], [3, 4]])
+	Traceback (most recent call last):
+	...
+	ValueError: objects are not aligned
