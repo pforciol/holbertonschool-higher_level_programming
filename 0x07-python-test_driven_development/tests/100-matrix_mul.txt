@@ -127,3 +127,14 @@ Now use it:
 	Traceback (most recent call last):
 	...
 	ValueError: m_a and m_b can't be multiplied
+
+
+	>>> matrix_mul()
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+	>>> matrix_mul([[1, 2], [3, 4]])
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_mul() missing 1 required positional argument: 'm_b'

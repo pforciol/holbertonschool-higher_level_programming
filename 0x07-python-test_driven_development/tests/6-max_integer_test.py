@@ -28,6 +28,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(lst), float('inf'))
         lst = [1, 3, -float('inf'), 2]
         self.assertEqual(max_integer(lst), 3)
+        lst = [4, 1, 2, 3]
+        self.assertEqual(max_integer(lst), 4)
 
     def test_type(self):
         """
