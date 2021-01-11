@@ -9,3 +9,4 @@ List of the Projects:
 * [0x05. Python - Exceptions](https://github.com/pforciol/holbertonschool-higher_level_programming/tree/master/0x05-python-exceptions)
 * [0x06. Python - Classes and Objects](https://github.com/pforciol/holbertonschool-higher_level_programming/tree/master/0x06-python-classes)
 * [0x07. Python - Test-driven development](https://github.com/pforciol/holbertonschool-higher_level_programming/tree/master/0x07-python-test_driven_development)
+* [0x08. Python - More Classes and Objects](https://github.com/pforciol/holbertonschool-higher_level_programming/tree/master/0x08-python-more_classes)
