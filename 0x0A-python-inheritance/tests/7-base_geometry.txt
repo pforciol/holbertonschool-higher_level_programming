@@ -1,0 +1,65 @@
+The ``BaseGeometry`` module
+==========================
+
+Using ``BaseGeometry``
+---------------------
+
+First import ``BaseGeometry`` from the ``BaseGeometry`` module:
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now use it:
+
+	>>> bg = BaseGeometry()
+	>>> type(bg)
+	<class '7-base_geometry.BaseGeometry'>
+
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> bg.integer_validator("betty", 3.14)
+	Traceback (most recent call last):
+	TypeError: betty must be an integer
+
+	>>> bg.integer_validator("betty", "holberton")
+	Traceback (most recent call last):
+	TypeError: betty must be an integer
+
+	>>> bg.integer_validator("betty", True)
+	Traceback (most recent call last):
+	TypeError: betty must be an integer
+
+	>>> bg.integer_validator("betty", None)
+	Traceback (most recent call last):
+	TypeError: betty must be an integer
+
+	>>> bg.integer_validator("betty", {1, 2, 3})
+	Traceback (most recent call last):
+	TypeError: betty must be an integer
+
+	>>> bg.integer_validator("betty", (1, 2, 3))
+	Traceback (most recent call last):
+	TypeError: betty must be an integer
+
+	>>> bg.integer_validator("betty", [1, 2, 3])
+	Traceback (most recent call last):
+	TypeError: betty must be an integer
+
+	>>> bg.integer_validator("betty", 0)
+	Traceback (most recent call last):
+	ValueError: betty must be greater than 0
+
+	>>> bg.integer_validator("betty", -98)
+	Traceback (most recent call last):
+	ValueError: betty must be greater than 0
+
+	>>> bg.integer_validator("betty", 98)
+
+	>>> bg.integer_validator("betty", (98))
+
+	>>> bg.integer_validator("", 98)
