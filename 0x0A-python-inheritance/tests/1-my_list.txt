@@ -38,6 +38,18 @@ Now use it:
 	>>> my_list.print_sorted()
 	[]
 
+	>>> my_list = MyList(["c", "d", "a", "e", "b"])
+	>>> my_list.print_sorted()
+	['a', 'b', 'c', 'd', 'e']
+
+	>>> my_list = MyList([1.1, 3.3, 4.4, 2.2, 5.5])
+	>>> my_list.print_sorted()
+	[1.1, 2.2, 3.3, 4.4, 5.5]
+
+	>>> my_list = MyList([-1, -3, -4, -2, -5])
+	>>> my_list.print_sorted()
+	[-5, -4, -3, -2, -1]
+
 	>>> my_list = MyList([1, "a"])
 	>>> my_list.print_sorted()
 	Traceback (most recent call last):
