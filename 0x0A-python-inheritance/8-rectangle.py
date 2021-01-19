@@ -4,6 +4,8 @@
 Contains a class Rectangle that inherits
 from BaseGeometry and some methods.
 """
+
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
