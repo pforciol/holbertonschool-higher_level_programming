@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Log parsing script."""
 import sys
-import signal
 
 total_size = 0
 codes = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
@@ -15,19 +14,16 @@ def print_stats():
             print("{}: {}".format(k, v))
 
 
-def signal_handler(sig, frame):
-    """Signal handler function."""
+try:
+    for line in sys.stdin:
+        iteration += 1
+        line = line.split()
+        if iteration % 10 == 0:
+            print_stats()
+
+        codes[int(line[7])] += 1
+        total_size += int(line[8])
+
+except KeyboardInterrupt:
     print_stats()
-    sys.exit()
-
-
-for line in sys.stdin:
-    line = line.split()
-    if iteration % 10 == 0:
-        print_stats()
-
-    codes[int(line[7])] += 1
-    total_size += int(line[8])
-
-    iteration += 1
-    signal.signal(signal.SIGINT, signal_handler)
+    exit()
