@@ -11,7 +11,7 @@ def print_stats():
     """Function that prints a resume of the stats."""
     print("File size: {}".format(total_size))
     for k, v in sorted(codes.items()):
-        if v:
+        if v is not:
             print("{}: {}".format(k, v))
 
 
@@ -28,4 +28,3 @@ try:
 
 except KeyboardInterrupt:
     print_stats()
-    raise
