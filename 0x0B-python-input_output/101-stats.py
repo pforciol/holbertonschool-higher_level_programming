@@ -18,11 +18,11 @@ def print_stats():
 try:
     for line in sys.stdin:
         line = line.split()
-
-        codes[int(line[7])] += 1
-        total_size += int(line[8])
-        if iteration % 10 == 0:
-            print_stats()
+        if len(line):
+            codes[int(line[-2])] += 1
+            total_size += int(line[-1])
+            if iteration % 10 == 0:
+                print_stats()
         iteration += 1
     print_stats()
 
