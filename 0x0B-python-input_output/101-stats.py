@@ -17,13 +17,13 @@ def print_stats():
 
 try:
     for line in sys.stdin:
+        iteration += 1
         line = line.split()
 
         codes[int(line[7])] += 1
         total_size += int(line[8])
-        if iteration % 10 == 0 and iteration is not 0:
+        if iteration % 10 == 0:
             print_stats()
-        iteration += 1
 
 except KeyboardInterrupt:
     print_stats()
