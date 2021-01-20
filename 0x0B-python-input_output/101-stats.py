@@ -23,9 +23,13 @@ try:
             if int(line[-2]) in codes:
                 codes[int(line[-2])] += 1
                 iteration += 1
-            total_size += int(line[-1])
-            if tmp == iteration:
-                iteration += 1
+            try:
+                total_size += int(line[-1])
+                if tmp == iteration:
+                    iteration += 1
+            except:
+                if tmp == iteration:
+                    continue
 
         if iteration % 10 == 0:
             print_stats()
