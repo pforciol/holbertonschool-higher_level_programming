@@ -19,9 +19,14 @@ try:
     for line in sys.stdin:
         line = line.split()
         if len(line) >= 2:
-            codes[int(line[-2])] += 1
+            tmp = iteration
+            if int(line[-2]) in codes:
+                codes[int(line[-2])] += 1
+                iteration += 1
             total_size += int(line[-1])
-            iteration += 1
+            if tmp == iteration:
+                iteration += 1
+
         if iteration % 10 == 0:
             print_stats()
     print_stats()
