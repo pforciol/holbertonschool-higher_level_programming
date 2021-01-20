@@ -25,6 +25,6 @@ try:
         codes[int(line[7])] += 1
         total_size += int(line[8])
 
-except KeyboardInterrupt as e:
+except KeyboardInterrupt:
     print_stats()
-    raise e
+    raise
