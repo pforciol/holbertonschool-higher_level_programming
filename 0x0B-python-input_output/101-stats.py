@@ -8,6 +8,7 @@ iteration = 0
 
 
 def print_stats():
+    """Function that prints a resume of the stats."""
     print("File size: {}".format(total_size))
     for k, v in sorted(codes.items()):
         if v is not 0:
