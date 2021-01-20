@@ -3,7 +3,8 @@
 import sys
 
 total_size = 0
-codes = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
+codes = {'200': 0, '301': 0, '400': 0, '401': 0,
+         '403': 0, '404': 0, '405': 0, '500': 0}
 iteration = 0
 
 
@@ -20,8 +21,8 @@ try:
         line = line.split()
         if len(line) >= 2:
             tmp = iteration
-            if int(line[-2]) in codes:
-                codes[int(line[-2])] += 1
+            if line[-2] in codes:
+                codes[line[-2]] += 1
                 iteration += 1
             try:
                 total_size += int(line[-1])
@@ -33,6 +34,7 @@ try:
 
         if iteration % 10 == 0:
             print_stats()
+
     print_stats()
 
 except KeyboardInterrupt:
