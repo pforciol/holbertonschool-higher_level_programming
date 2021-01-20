@@ -19,17 +19,10 @@ def print_stats():
 try:
     for line in sys.stdin:
         line = line.split()
-        tmp = iteration
-        if line[-2] in codes:
-            codes[line[-2]] += 1
+        if len(line) >= 2:
             iteration += 1
-        try:
+            codes[line[-2]] += 1
             total_size += int(line[-1])
-            if tmp == iteration:
-                iteration += 1
-        except:
-            if tmp == iteration:
-                continue
 
         if iteration % 10 == 0:
             print_stats()
