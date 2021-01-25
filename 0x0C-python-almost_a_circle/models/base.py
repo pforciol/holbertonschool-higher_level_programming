@@ -130,3 +130,11 @@ class Base():
 
         except IOError:
             return []
+
+    def draw(list_rectangles, list_squares):
+        """Opens a window and draws all the Rectangles and Squares.
+
+        Args:
+            list_rectangles (list): a list of rectangle instances.
+            list_squares (list): a list of square instances.
+        """
