@@ -76,10 +76,12 @@ class Base():
         Args:
             dictionary (dict): the values of the wanted instance.
         """
-        if dictionary and len(dictionary) > 0:
+        if cls.__name__ == "Rectangle":
             new = cls(1, 1)
-            new.update(**dictionary)
-            return new
+        else:
+            new = cls(1)
+        new.update(**dictionary)
+        return new
 
     @classmethod
     def load_from_file(cls):
