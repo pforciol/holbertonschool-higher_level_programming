@@ -29,5 +29,7 @@ if __name__ == "__main__":
 
     session = Session(bind=engine)
 
-    for instance in session.query(State).order_by(State.id):
+    q = session.query(State).order_by(State.id)
+
+    for instance in q:
         print("{}: {}".format(instance.id, instance.name))
