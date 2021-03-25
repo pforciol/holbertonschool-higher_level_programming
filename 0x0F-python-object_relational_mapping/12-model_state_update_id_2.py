@@ -31,5 +31,5 @@ if __name__ == "__main__":
 
     q = session.query(State).filter(State.id == 2)
     q.update({State.name: "New Mexico"})
-    
+
     session.commit()
