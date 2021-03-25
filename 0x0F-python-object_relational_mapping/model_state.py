@@ -3,9 +3,8 @@
 
 Contains the State class that inherits from Base = declarative_base()
 """
-from sqlalchemy import MetaData, Table, Column, Integer, String
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.sql.expression import null
 
 Base = declarative_base()
 
