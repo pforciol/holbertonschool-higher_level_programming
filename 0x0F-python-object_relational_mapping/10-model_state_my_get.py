@@ -34,8 +34,7 @@ if __name__ == "__main__":
 
     q = session.query(State).filter(State.name == st_name).order_by(State.id)
 
-    try:
-        instance = q.all()[0]
-        print(instance.id)
-    except:
+    if q.first():
+        print(q.first().id)
+    else:
         print("Not found")
