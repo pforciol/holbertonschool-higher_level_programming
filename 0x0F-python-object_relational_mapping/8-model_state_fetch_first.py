@@ -28,8 +28,9 @@ if __name__ == "__main__":
 
     session = Session(bind=engine)
 
-    try:
-        instance = session.query(State).order_by(State.id).limit(1).all()[0]
+    instance = session.query(State).order_by(State.id).first()
+
+    if instance:
         print("{}: {}".format(instance.id, instance.name))
-    except:
+    else:
         print("Nothing")
