@@ -17,5 +17,6 @@ List of the Projects:
 * [0x0D. SQL - Introduction](https://github.com/pforciol/holbertonschool-higher_level_programming/tree/master/0x0D-SQL_introduction)
 * [0x0E. SQL - More queries](https://github.com/pforciol/holbertonschool-higher_level_programming/tree/master/0x0E-SQL_more_queries)
 * [0x0F. Python - Object-relational mapping](https://github.com/pforciol/holbertonschool-higher_level_programming/tree/master/0x0F-python-object_relational_mapping)
+* [0x10. Python - Network #0](https://github.com/pforciol/holbertonschool-higher_level_programming/tree/master/0x10-python-network_0)
 * [0x12. JavaScript - Warm up](https://github.com/pforciol/holbertonschool-higher_level_programming/tree/master/0x12-javascript-warm_up)
 * [0x13. JavaScript - Objects, Scopes and Closures](https://github.com/pforciol/holbertonschool-higher_level_programming/tree/master/0x13-javascript_objects_scopes_closures)
