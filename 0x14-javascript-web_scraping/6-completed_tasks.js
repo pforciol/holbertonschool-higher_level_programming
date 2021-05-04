@@ -8,8 +8,10 @@ r.get(process.argv[2], (err, res, body) => {
     const computed = {};
     const todos = JSON.parse(body);
     todos.forEach(task => {
-      if (!computed[task.userId]) computed[task.userId] = 0;
-      computed[task.userId] += task.completed;
+      if (task.completed) {
+        if (!computed[task.userId]) computed[task.userId] = 1;
+        else computed[task.userId] += 1;
+      }
     });
     console.log(computed);
   }
